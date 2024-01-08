@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Weather Turku Port Prediction</title>
+        <link href="{{ url_for('static', path='style.css') }}" rel="stylesheet">
+   </head>
+
+   <body>
+      <div id="wrap">
+         <h1>Weather Turku Port Prediction</h1>
+         <!--h4>Imane YASSIRI - MSD2</h4-->
+         <section id="furn" class="frame2">
+            <div class="login">
+               <form action="/predict" method="post">
+                  <table class="entryForm">
+                     <tr>
+                        <th>Temperature_C</th>
+                        <td><input type="text" name="Temperature_C" placeholder="Temperature_C" required="required" />
+                     </tr>
+
+                     <tr>
+                      <th>Humidity</th>
+                      <td><input type="text" name="Humidity" placeholder="Humidity" required="required" />
+                    </tr>
+
+                    <tr>
+                      <th>Wind_speed_kmph</th>
+                      <td><input type="text" name="Wind_speed_kmph" placeholder="Wind_speed_kmph" required="required" />
+                   </tr>
+
+                   <tr>
+                    <th>Wind_bearing_degrees</th>
+                    <td><input type="text" name="Wind_bearing_degrees" placeholder="Wind_bearing_degrees" required="required" />
+                 </tr>
+
+                 <tr>
+                  <th>Visibility_km</th>
+                  <td><input type="text" name="Visibility_km" placeholder="Visibility_km" required="required" />
+               </tr>
+
+               <tr>
+                <th>Pressure_millibars</th>
+                <td><input type="text" name="Pressure_millibars" placeholder="Pressure_millibars" required="required" />
+             </tr>
+
+             <tr>
+              <th>Current_weather_condition</th>
+              <td><input type="text" name="Current_weather_condition" placeholder="Current_weather_condition" required="required" />
+           </tr>
+                  </table>
+                  <div class="btns">
+                     <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+                  </div>
+                  {{result}}
+               </form>
+            </div>
+         </section>
+         <br>
+         <br>
+      </div>
+   </body>
+</html>
